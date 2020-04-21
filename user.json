@@ -1,0 +1,14 @@
+[
+  {
+    "username": "lib",
+    "name": "Librarian",
+    "role": "LIBRARIAN",
+    "password": "1"
+  },
+  {
+    "username": "cust",
+    "name": "Customer",
+    "role": "user",
+    "password": "2"
+  }
+]

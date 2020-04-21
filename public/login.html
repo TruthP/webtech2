@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="css/form-elements.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<div class="container-fluid">
+    <div class="welcome_message">
+        <marquee behavior="scroll" direction="left" scrollamount="10">Üdvözlünk az ONLINE KÖNYVTÁR weboldalán! Reméljük, hogy megtalálod a könyvet, amire vágysz!</marquee>
+    </div>
+	<div ng-if="statusCode == 401">
+		<div class="alert alert-warning">
+			<p><strong>Belépési hiba!</strong> Helytelen felhasználónév vagy jelszó.</p>
+		</div>
+	</div>
+	<div ng-if="statusCode >= 500">
+		<div class="alert alert-dander">
+			<p><strong>Error {{ statusCode }}!</strong> Server Error</p>
+		</div>
+	</div>
+    <div class="row">
+        <div class="col-sm-5 col-sm-offset-1 form-box">
+            <div class="form-top">
+                <div class="form-top-left">
+                    <h3>Bejelentkezés az ONLINE KÖNYVTÁRBA!</h3>
+                    <p>Írd be a felhasználónevedet és a jelszavadat!</p>
+                    
+                </div>
+                <div class="form-top-right">
+                    <i class="fa fa-lock"></i>
+                </div>
+            </div>
+
+            <div class="form-bottom">
+                <form role="form" ng-submit="login()" class="login-form">
+                    <div class="form-group">
+                        <label class="sr-only" for="form-username">Felhasználónév</label>
+                        <input type="text" ng-model="newuser.username" placeholder="Felhasználónév (username=lib, psw=1 vagy username=cust, psw=2) " class="form-username form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="form-password">Jelszó</label>
+                        <input type="password" ng-model="newuser.password" placeholder="Jelszó (username=lib, psw=1 vagy username=cust, psw=2)" class="form-password form-control">
+                    </div>
+                    <button type="submit" class="btn"><i class="glyphicon glyphicon-ok-sign"></i> Bejelentkezés</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

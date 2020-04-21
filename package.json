@@ -1,0 +1,14 @@
+{
+  "name": "webtech2",
+  "version": "0.0.0",
+  "description": "webtech2",
+  "main": "app.js",
+  "author": {"name": " user"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security"
+  }
+}

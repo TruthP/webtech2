@@ -1,0 +1,134 @@
+
+body {
+	font-family: Bahnschrift;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 30px;
+    text-align: center;
+	background-image: url("/img/library.jpg") ;
+	background-size: cover;
+
+}
+
+.bookList {
+	background-color: #ec971f;
+	text-align: left;
+}
+.addAuthor {
+	background-color: #2e6da4;
+	text-align: center;
+}
+.addBook {
+	background-color: #dddddd;
+	text-align: center;
+}
+.addBookInstance {
+	background-color: #F6E57A;
+	text-align: center;
+}
+.manageRentals {
+	background-color: #faf2cc;
+	text-align: left;
+}
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+}
+
+strong {
+	font-weight: 500;
+}
+
+a, a:hover, a:focus {
+	font-size: large;
+	transition: all 1s;
+
+}
+
+h1, h2 {
+	margin-top: 10px;
+	font-size: 40px;
+    font-weight: 100;
+    color: #555;
+    line-height: 50px;
+}
+
+h3 {
+	font-size: 25px;
+    font-weight: 300;
+    color: #555;
+    line-height: 30px;
+
+}
+.welcome_message {
+	font-size: 25px;
+	font-weight: 300;
+	color: black;;
+	line-height: 30px;
+	top: 20px;
+	background-color: #ffffff;
+}
+
+::selection { background: #ffffff; color: #761c19; text-shadow: none; }
+
+
+.form-box {
+	margin-top: 35px;
+	background-color: #fcf8e3;
+}
+
+.form-top {
+	overflow: hidden;
+	padding: 0 25px 15px 25px;
+	background: #444;
+	background: rgb(100, 0, 0);
+	border-radius: 4px 4px 0 0;
+	text-align: left;
+}
+
+.form-top-left {
+	float: left;
+	width: 75%;
+	padding-top: 25px;
+}
+
+.form-top-left h3 {
+	margin-top: 0;
+	color: #fff;
+}
+.form-top-left p {
+	opacity: 0.8; color: #fff;
+}
+
+.form-top-right {
+	float: left;
+	width: 25%;
+	padding-top: 5px;
+	font-size: 66px;
+	color: #fff;
+	line-height: 100px;
+	text-align: right;
+	opacity: 0.3;
+}
+
+.form-bottom {
+	padding: 25px 25px 30px 25px;
+	background: #444;
+	background: rgba(0, 0, 0, 0.3);
+	border-radius: 0 0 4px 4px;
+	text-align: left;
+}
+
+.form-bottom form textarea {
+	height: 100px;
+}
+
+.form-bottom form button.btn {
+	width: 100%;
+}
+
+.form-bottom form .input-error {
+	border-color: #de615e;
+}

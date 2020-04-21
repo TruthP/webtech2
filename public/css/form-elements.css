@@ -1,0 +1,59 @@
+input[type="text"], input[type="password"], textarea, textarea.form-control {
+	height: 50px;
+    margin: 0;
+    padding: 0 20px;
+    vertical-align: middle;
+    background: #761c19;
+    border: 3px solid #fff;
+    font-family: Bahnschrift
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 50px;
+    color: #000000;
+    border-radius: 25px;
+    box-shadow: 1px 4px #000000;
+    transition: all 1s;
+}
+
+textarea, textarea.form-control {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	line-height: 30px;
+
+}
+
+input[type="text"]::placeholder, input[type="password"]::placeholder, textarea::placeholder, textarea.form-control::placeholder {
+    color: #888;
+}
+
+button.btn {
+	height: 60px;
+    margin: 0;
+    padding: 0 20px;
+    vertical-align: middle;
+    background: #ffa12b;
+    border: 0;
+    font-family: Bahnschrift;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 50px;
+    color: #000000;
+    box-shadow: 1px 4px #000000;
+    transition: all 1s;
+}
+
+button.btn:hover {
+    opacity: 0.8; color: #fff;
+}
+
+button.btn:active {
+    outline: 0; opacity: 0.8; color: #fff;  box-shadow: none;
+}
+
+button.btn:focus {
+    outline: 0; opacity: 0.8; background: #ffff00; color: #fff;
+}
+
+button.btn:active:focus, button.btn.active:focus {
+    outline: 0; opacity: 0.6; background: #ffff00; color: #fff;
+}

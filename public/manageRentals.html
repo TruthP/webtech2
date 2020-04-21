@@ -1,0 +1,75 @@
+<link rel="stylesheet" href="css/style.css">
+
+<div class="manageRentals">
+<div class="container-fluid">
+	<div class="table-responsive">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Kölcsönző</th>
+					<th>Cím</th>
+					<th>Szerző</th>
+					<th>Jóváhagyás</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="request in requests">
+					<td>{{ request.borrower }}</td>
+					<td>{{ request.title }}</td>
+					<td>{{ request.author }}</td>
+					<td><button type="button" class="btn btn-default"
+							ng-click="lendBook(request)" data-toggle="modal"
+							data-target="#lendBookModal">Jóváhagy</button></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div id="lendBookModal" class="modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4>Jóváhagyás</h4>
+				</div>
+				<div class="modal-body">
+					<div ng-if="statusCode == 200">
+						<div class="alert alert-success">
+							<p>
+								<strong>Kész!</strong> Jóváhagytad, hogy {{ request.author }} {{
+								request.title }} című könyvét {{ request.borrower }} kikölcsönözze..
+							</p>
+						</div>
+					</div>
+					<div ng-if="statusCode == 403">
+						<div class="alert alert-warning">
+							<p>
+								<strong>Nincs jogosultságod kölcsönzés jóváhagyására!</strong>
+							</p>
+						</div>
+					</div>
+					<div ng-if="statusCode == 409">
+						<div class="alert alert-warning">
+							<p>
+								<strong>Nem tudsz kölcsönzést jóváhagyni, mert jelenleg a könyből nincs elérhető példány!</strong>
+							</p>
+						</div>
+					</div>
+					<div ng-if="statusCode >= 500">
+						<div class="alert alert-danger">
+							<p>
+								<strong>Error {{ statusCode }}!</strong> Server Error
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Bezár</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<p></p>
+	<img src="/img/book3.gif" alt="Book3" width="600" height="300">
+	<p></p>
+</div>
+</div>

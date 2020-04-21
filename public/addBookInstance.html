@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="css/style.css">
+
+<div class="addBookInstance">
+<div class="container-fluid">
+	<div ng-if="statusCode == 200">
+		<div class="alert alert-success">
+			<p><strong>Kész!</strong> Hozzáadtál {{ book.quantity }} darabot  {{ book.author }} {{ book.title }} című könyvéből.</p>
+		</div>
+	</div>
+	<div ng-if="statusCode == 403">
+		<div class="alert alert-warning">
+			<p><strong>Nincs jogosultságod a példányszám módosításához!</strong></p>
+		</div>
+	</div>
+	<div ng-if="statusCode >= 500">
+		<div class="alert alert-danger">
+			<p><strong>Error {{ statusCode }}!</strong> Server Error</p>
+		</div>
+	</div>
+	<form ng-submit="addBookInstance()">
+		<div class="form-group">
+			<label>Könyv:</label>
+			<select ng-model="book" class="form-control" ng-options="b.author + ' - ' + b.title for b in books"></select>
+		</div>
+		<div class="form-group">
+			<label>Mennyiség:</label>
+			<input type="number" class="form-control" ng-model="quantity" min="1" />
+		</div>
+		<button type="submit" class="btn btn-default">Példányszám hozzáadása</button>
+		<p></p>
+	</form>
+</div>
+</div>
